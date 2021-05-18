@@ -130,13 +130,14 @@ items:
       activeDeadlineSeconds: 21600
       recreateParams:
         timeoutSeconds: 600
-      resources:
-        limits:
-          cpu: 500m
-          memory: 2Gi
-        requests:
-          cpu: 500m
-          memory: 1Gi
+      #temporary disable resource request and limit to allow overcommit
+      # resources:
+      #   limits:
+      #     cpu: 500m
+      #     memory: 2Gi
+      #   requests:
+      #     cpu: 500m
+      #     memory: 1Gi
       type: Recreate
     template:
       metadata:
